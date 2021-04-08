@@ -1,0 +1,21 @@
+body {
+  background: url('../images/bg.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #000;
+}
+ul {
+  padding:0;
+}
+.container-fluid {
+  padding-top: 100px;
+}
+.fa {
+  cursor: pointer;
+  padding-left: 3px;
+}
+#logo {
+    max-height: 30px;
+}

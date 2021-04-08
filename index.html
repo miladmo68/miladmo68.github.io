@@ -1,8 +1,91 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Milad Playlist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
 </head>
 <body>
-  <h1>Hello World!</h1>
+  
+
+
+<!-- Navigation -->
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark text-light  text-center ">
+  <a class="navbar-brand " href="#">Milad Playlist </a>
+ 
+</nav>
+
+    <!-- Forms -->
+
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-12 col-sm-6">
+              <div class="card mb-3">
+                <div class="card-header bg-dark text-light">
+                  <h3 class="d-inline">Custom Form</h3>
+                </div>
+                <div id="sendForm" class="card-body text-dark">
+                      <form class="form">
+                          <input id="name" type="text" class="form-control" placeholder="Your Name" />
+                          <input id="artist" type="text" class="form-control" placeholder="Artist"/>
+                          <input id="song" type="text" class="form-control" placeholder="Song" />
+                          <button type="submit" class="btn btn-success mt-3 float-right">Add Song</button>
+                      </form>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="card-header bg-dark text-light">
+                  <h3 class="d-inline">Form with Artist List</h3>
+                </div>
+                <div id="sendForm1" class="card-body text-dark">
+                      <form class="form">
+                          <input id="name1" type="text" class="form-control" placeholder="Your Name" />
+                          <select id="artistNew" class="custom-select custom-select"></select>
+                          <select id="songNew" class="custom-select custom-select"></select>
+                          <button type="submit" class="btn btn-success mt-3 float-right">Add Song</button>
+                        </form>
+                </div>
+              </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="card mb-3">
+                <div class="card-header bg-dark text-light">
+                    <h3 class="d-inline">Playlist</h3>
+                </div>
+                <div class="card-body text-dark">
+                    <table id="playlist" class=" table table-hover">
+                        <thead>
+                          <tr>
+                            <th>Username</th>
+                            <th>Artist</th>
+                            <th>Song</th>
+                            <th>Rate</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+
+
+  <!-- js -->
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
